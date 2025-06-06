@@ -1,7 +1,7 @@
 # GlucoseFormer
 
 
-![Model Forecast Comparison](sample_27_forecast_dark.png)
+![Model Forecast Comparison](sample_27_forecast.png)
 
 ## Overview
 
