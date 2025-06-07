@@ -77,7 +77,7 @@ This allows us to understand the requirements for data and number of parameters 
 
 Loss function: We chose Mean Absolute Error (MAE) as our primary loss metric. In this context—predicting CGM values—using Mean Squared Error (MSE) felt unnecessarily harsh due to its tendency to heavily penalize outliers. Exploring alternative loss functions tailored to the clinical or temporal sensitivity of glucose prediction remains a promising direction for future work.
 
-For consistency, we used the same sized 3.1 million parameter transformer for each experiment. There was consideration of increasing our MLP layer dimensions as we add IOB or more data, but this was outside the scope of this study. 
+For consistency, we used the same sized 3.1 million parameter transformer for each experiment. There was consideration of increasing our MLP layer dimensions as we add IOB or more data, but this was outside the scope of our study. 
 
 | Parameter         | Value | Description                                         |
 |-------------------|-------|-----------------------------------------------------|
