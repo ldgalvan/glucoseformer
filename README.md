@@ -64,5 +64,28 @@ One consideration to make is, as we varying our context length (2.5hr, 5hr, 10hr
 | 5 hours        | 28,514           | 3,564          | 3,565           |
 | 10 hours       | 6,909            | 863            | 865             |
 
+This allows us to understand the requirements for data and number of parameters for our model.
+
+## Model Training
+
+For consistency, we use a 3.1 million parameter transformer for each sequence length. There was consideration of increasing our MLP layer dimensions as we add IOB or more data, but this was outside the scope of this study. Here's the parameters
+
+| Parameter         | Value | Description                                         |
+|-------------------|-------|-----------------------------------------------------|
+| `input_size`      | 4     | Number of input features (e.g., CGM, basal, bolus,iob)  |
+| `d_model`         | 256   | Embedding dimension for each token                 |
+| `nhead`           | 8     | Number of attention heads                          |
+| `num_layers`      | 4     | Number of Transformer encoder layers               |
+| `dim_feedforward` | 1024  | Hidden size of the MLP (position-wise feedforward) |
+| `dropout`         | 0.2   | Dropout probability used across layers             |
+
+
+
+
+
+
+
+
+
 
 
