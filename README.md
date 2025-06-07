@@ -101,15 +101,17 @@ Analysis: The 10-hour context window setup suffers from limited data availabilit
 
 Overview: It was insightful to observe how different model variants performed in terms of percentage error. The best-performing models were those using the 5-hour input window, which provided 28,500 training sequences, striking an effective balance between inference speed and prediction accuracy.
 
-### ✅ 10 Hour Context Window (6900 samples)
+
+
+### ✅ 2.5 Hour Context Window (63,000 samples)
 
 | Model                             | APE (%)     | MAE        | RMSE       | Time/Epoch (s)   | Inference (ms) |
 |----------------------------------|-------------|------------|------------|------------------|----------------|
-| Transformer P.E.                 | 21.30       | 31.6       | 43.1       | 🥇 2.22           | 6.33           |
-| + PCA (2 features)               | 24.50       | 37.2       | 50.1       | 🥇 2.22           | 🥇 3.65         |
-| + IOB                            | 19.60       | 29.6       | 41.2       | 2.27             | 3.86           |
-| + RoPE                           | 🥇 12.10    | 18.5       | 🥇 27.7     | 2.64             | 5.70           |
-| + RoPE + PCA (3 features) + IOB  | 12.70       | 🥇 13.5     | 🥇 27.7     | 2.64             | 4.94           |
+| Transformer P.E.                 | 11.50       | 16.3       | 25.4       | 6.91             | 2.35           |
+| + PCA (2 features)               | 15.60       | 23.1       | 33.1       | 7.02             | 🥇 1.50         |
+| + IOB                            | 12.00       | 17.4       | 26.7       | 7.03             | 🥇 1.44         |
+| + RoPE                           | 🥇 11.30    | 🥇 16.3     | 🥇 25.2     | 9.60             | 2.22           |
+| + RoPE + PCA (3 features) + IOB  | 11.90       | 17.2       | 26.1       | 10.1             | 3.77           |
 
 ---
 
@@ -125,15 +127,18 @@ Overview: It was insightful to observe how different model variants performed in
 
 ---
 
-### ✅ 2.5 Hour Context Window (63,000 samples)
+### ✅ 10 Hour Context Window (6900 samples)
 
 | Model                             | APE (%)     | MAE        | RMSE       | Time/Epoch (s)   | Inference (ms) |
 |----------------------------------|-------------|------------|------------|------------------|----------------|
-| Transformer P.E.                 | 11.50       | 16.3       | 25.4       | 6.91             | 2.35           |
-| + PCA (2 features)               | 15.60       | 23.1       | 33.1       | 7.02             | 🥇 1.50         |
-| + IOB                            | 12.00       | 17.4       | 26.7       | 7.03             | 🥇 1.44         |
-| + RoPE                           | 🥇 11.30    | 🥇 16.3     | 🥇 25.2     | 9.60             | 2.22           |
-| + RoPE + PCA (3 features) + IOB  | 11.90       | 17.2       | 26.1       | 10.1             | 3.77           |
+| Transformer P.E.                 | 21.30       | 31.6       | 43.1       | 🥇 2.22           | 6.33           |
+| + PCA (2 features)               | 24.50       | 37.2       | 50.1       | 🥇 2.22           | 🥇 3.65         |
+| + IOB                            | 19.60       | 29.6       | 41.2       | 2.27             | 3.86           |
+| + RoPE                           | 🥇 12.10    | 18.5       | 🥇 27.7     | 2.64             | 5.70           |
+| + RoPE + PCA (3 features) + IOB  | 12.70       | 🥇 13.5     | 🥇 27.7     | 2.64             | 4.94           |
+
+
+
 
 ## Conclusion and Future Improvements
 
