@@ -98,8 +98,7 @@ Analysis: The 10-hour context window setup suffers from limited data availabilit
 
 ## Results
 
-
-
+Overview: It was insightful to observe how different model variants performed in terms of percentage error. The best-performing models were those using the 5-hour input window, which provided 28,500 training sequences, striking an effective balance between inference speed and prediction accuracy.
 
 ### ✅ 10 Hour Input (6900 samples)
 
