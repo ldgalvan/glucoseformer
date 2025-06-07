@@ -35,7 +35,7 @@ Key observation #1: The dataset contains continuous glucose monitoring (CGM) dat
 | 259        | 140                |
 | 362        | 167                |
 | 146        | 184                |
-| 046        | 469                |
+| 046        | 469                |        ![CGM data](patient_counts_distribution.png)
 | 348        | 626                |
 | 369        | 747                |   
 | 076        | 1,042              |
