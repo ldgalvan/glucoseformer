@@ -50,4 +50,12 @@ This helps our time-series transformer learn adapt and account for this variable
 
 ![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
 
-## 
+## Data Processing
+
+We use this script to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used
+
+![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
+
+
+
+
