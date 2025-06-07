@@ -37,7 +37,7 @@ Key observation #1: The dataset contains continuous glucose monitoring (CGM) dat
 | 146        | 184                |
 | 046        | 469                |
 | 348        | 626                |
-| 369        | 747                |
+| 369        | 747                |   
 | 076        | 1,042              |
 | 060        | 2,027              |
 | ...        | ...                |
