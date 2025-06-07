@@ -54,7 +54,7 @@ This helps our time-series transformer learn adapt and account for this variable
 
 We use this script to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used
 
-![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
+![Bolus2](sequence_split_visual.png)
 
 
 
