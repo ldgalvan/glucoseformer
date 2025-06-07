@@ -72,7 +72,7 @@ For consistency, we use a 3.1 million parameter transformer for each sequence le
 
 | Parameter         | Value | Description                                         |
 |-------------------|-------|-----------------------------------------------------|
-| `input_size`      | 4     | Number of input features (e.g., CGM, basal, bolus,iob)  |
+| `input_size`      | 4     | Number of input features (e.g., CGM, basal, bolus, iob)  |
 | `d_model`         | 256   | Embedding dimension for each token                 |
 | `nhead`           | 8     | Number of attention heads                          |
 | `num_layers`      | 4     | Number of Transformer encoder layers               |
