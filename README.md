@@ -8,7 +8,7 @@
 In this study we introduce GlucoseFormer, a time-series Transformer-based model designed to forecast continuous glucose monitoring (CGM) levels. There are 3 key implementations:
 
 - **[RoPE (Rotary Positional Encoding)](https://arxiv.org/abs/2104.09864)**  
-  Improves the model’s ability to understand time-based relationships by encoding relative position information—ideal for long context windows.
+  Improves the model’s ability to understand time-based relationships by encoding relative position information.
 
 - **IOB (Insulin on Board)**  
   Simulates the decaying effect of bolus insulin over time, helping the model factor in insulin that is still active in the body.
