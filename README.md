@@ -86,6 +86,11 @@ For consistency, we use a 3.1 million parameter transformer for each sequence le
 | `dim_feedforward` | 1024  | Hidden size of the MLP (position-wise feedforward) |
 | `dropout`         | 0.2   | Dropout probability used across layers             |
 
+Here's the train/val losses for each model
+
+![Bolus2](sequence_split_visual.png)
+![Bolus2](sequence_split_visual.png)
+![Bolus2](sequence_split_visual.png)
 
 
 
