@@ -134,6 +134,20 @@ Overview: It was insightful to observe how different model variants performed in
 | + RoPE                           | 🥇 11.30    | 🥇 16.3     | 🥇 25.2     | 9.60             | 2.22           |
 | + RoPE + PCA (3 features) + IOB  | 11.90       | 17.2       | 26.1       | 10.1             | 3.77           |
 
+## Conclusion and Future Improvements
+
+Forecasting continuous glucose monitor (CGM) values over time is a critical challenge in modern healthcare. In this project, we explored the feasibility of using transformer-based models with approximately 3.1 million parameters, along with feature extraction and dimensionality reduction techniques, to predict CGM trends.
+
+### Future Directions
+
+- **Predicting hypoglycemia and hyperglycemia events**  
+  These events can have severe or even life-threatening consequences. Accurately forecasting them could help inform patients in advance and enable timely intervention.
+
+- **Personalized modeling with extended context**  
+  Future work could involve training models on a larger context window tailored to individual patients, rather than aggregating data from many individuals.
+
+- **Incorporating additional physiological features**  
+  Including signals like basal insulin decay and other relevant biomarkers could improve model robustness and clinical relevance.
 
 
 
