@@ -10,6 +10,4 @@ COPY . .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set default command to run your training script
-CMD ["python", "process_and_train/train_glucformer_rope_iob_pca.py"]
 
