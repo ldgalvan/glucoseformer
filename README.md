@@ -46,7 +46,7 @@ With frequent bolus injections happening, we introduce a new variable which inco
 
 ![Bolus](bolus_decay.png)
 
-This helps our time-series transformer learn adapt and account for this variable, as it is something which directly impacts future CGM measurments. Here's an example of how this new varaiable behaves compared to cgm readings
+This helps our time-series transformer learn to account for decaying bolus insulin that's still in the body. Here's an example of how this new varaiable behaves compared to cgm readings
 
 ![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
 
