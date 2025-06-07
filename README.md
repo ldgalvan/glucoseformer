@@ -1,4 +1,4 @@
-# GlucoseFormer
+# GlucoseFormer 📈
 
 
 ![Model Forecast Comparison](sample_27_forecast_dark.png)
