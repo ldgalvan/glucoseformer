@@ -41,6 +41,10 @@ In addition to glucose measurements, the dataset also includes detailed records 
 ## Feature Engineering
 
 With frequent bolus injections happening, we introduce a new variable which incorporated the decay rate of Insulin on Board (IOB). 
+
 ![Bolus](bolus_decay.png)
 
-This helps our time-series transformer learn adapt and account for this variable, as it is something which directly impacts future CGM measurments.
+This helps our time-series transformer learn adapt and account for this variable, as it is something which directly impacts future CGM measurments. Here's an example of how this new varaiable behaves compared to cgm readings
+
+![Bolus2](bolus_decay.png)
+
