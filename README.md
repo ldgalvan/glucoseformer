@@ -100,7 +100,7 @@ Analysis: The 10-hour context window setup suffers from limited data availabilit
 
 Overview: It was insightful to observe how different model variants performed in terms of percentage error. The best-performing models were those using the 5-hour input window, which provided 28,500 training sequences, striking an effective balance between inference speed and prediction accuracy.
 
-### ✅ 10 Hour Input (6900 samples)
+### ✅ 10 Hour Context Window (6900 samples)
 
 | Model                             | APE (%)     | MAE        | RMSE       | Time/Epoch (s)   | Inference (ms) |
 |----------------------------------|-------------|------------|------------|------------------|----------------|
@@ -112,7 +112,7 @@ Overview: It was insightful to observe how different model variants performed in
 
 ---
 
-### ✅ 5 Hour Input (28,500 samples)
+### ✅ 5 Hour Context Window (28,500 samples)
 
 | Model                             | APE (%)     | MAE        | RMSE       | Time/Epoch (s)   | Inference (ms) |
 |----------------------------------|-------------|------------|------------|------------------|----------------|
@@ -124,7 +124,7 @@ Overview: It was insightful to observe how different model variants performed in
 
 ---
 
-### ✅ 2.5 Hour Input (63,000 samples)
+### ✅ 2.5 Hour Context Window (63,000 samples)
 
 | Model                             | APE (%)     | MAE        | RMSE       | Time/Epoch (s)   | Inference (ms) |
 |----------------------------------|-------------|------------|------------|------------------|----------------|
