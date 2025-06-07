@@ -3,9 +3,9 @@
 
 ![Model Forecast Comparison](sample_27_forecast_dark.png)
 
-## Overview
+## Intro
 
-GlucoseFormer is a time-series Transformer-based model designed to forecast continuous glucose monitoring (CGM) levels. To enhance prediction accuracy and interpretability, the model incorporates:
+In this study we introduce GlucoseFormer, a time-series Transformer-based model designed to forecast continuous glucose monitoring (CGM) levels. There are 3 key implementations in this project:
 
 - **[RoPE (Rotary Positional Encoding)](https://arxiv.org/abs/2104.09864)**  
   Improves the model’s ability to understand time-based relationships by encoding relative position information—ideal for long context windows.
