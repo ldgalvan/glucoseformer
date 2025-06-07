@@ -102,37 +102,40 @@ Analysis: The 10-hour context window setup suffers from limited data availabilit
 
 ### 10 Hour Input (6900 samples)
 
-| Model                             | APE (%) | MAE | RMSE | Time/Epoch (s) | Inference (ms) |
-|----------------------------------|---------|-----|------|----------------|----------------|
-| Transformer P.E.                 | 21.30   | 31.6 | 43.1 | **2.22**           | 6.33           |
-| + PCA (2 features)               | 24.50   | 37.2 | 50.1 | **2.22**           | **3.65**       |
-| + IOB                            | 19.60   | 29.6 | 41.2 | 2.27           | 3.86           |
-| + RoPE                           | **12.10** | 18.5 | **27.7** | 2.64       | 5.70           |
-| + RoPE + PCA (3 features) + IOB  | 12.70   | **13.5** | **27.7** | 2.64     | 4.94           |
+| Model | APE (%) | MAE | RMSE | Time/Epoch (s) | Inference (ms) |
+|--|--|--|--|--|-|
+| Transformer P.E. | 21.30 | 31.6 | 43.1 | <span style='color:gold;font-weight:bold'>2.22</span> | 6.33 |
+| + PCA (2 features) | 24.50 | 37.2 | 50.1 | <span style='color:gold;font-weight:bold'>2.22</span> | <span style='color:gold;font-weight:bold'>3.65</span> |
+| + IOB | 19.60 | 29.6 | 41.2 | 2.27 | 3.86 |
+| + RoPE | <span style='color:gold;font-weight:bold'>12.10</span> | 18.5 | <span style='color:gold;font-weight:bold'>27.7</span> | 2.64 | 5.70 |
+| + RoPE + PCA (3 features) + IOB | 12.70 | <span style='color:gold;font-weight:bold'>13.5</span> | <span style='color:gold;font-weight:bold'>27.7</span> | 2.64 | 4.94 |
 
 ---
 
 ### 5 Hour Input (28,500 samples)
 
-| Model                             | APE (%) | MAE | RMSE | Time/Epoch (s) | Inference (ms) |
-|----------------------------------|---------|-----|------|----------------|----------------|
-| Transformer P.E.                 | **10.60**   | **15.3** | **24.4** | **4.78**           | 3.12           |
-| + PCA (2 features)               | 13.50   | 19.7 | 28.8 | **4.78**           | 2.13           |
-| + IOB                            | 11.60   | 16.6 | 25.8 | 4.87           | **2.11**       |
-| + RoPE                           | 10.80   | 15.8 | 24.6 | 5.99           | 3.17           |
-| + RoPE + PCA (3 features) + IOB  | 10.90 | 15.8 | **24.7** | 6.29  | 2.56           |
+| Model | APE (%) | MAE | RMSE | Time/Epoch (s) | Inference (ms) |
+|--|--|--|--|--|-|
+| Transformer P.E. | <span style='color:gold;font-weight:bold'>10.60</span> | <span style='color:gold;font-weight:bold'>15.3</span> | <span style='color:gold;font-weight:bold'>24.4</span> | <span style='color:gold;font-weight:bold'>4.78</span> | 3.12 |
+| + PCA (2 features) | 13.50 | 19.7 | 28.8 | <span style='color:gold;font-weight:bold'>4.78</span> | 2.13 |
+| + IOB | 11.60 | 16.6 | 25.8 | 4.87 | <span style='color:gold;font-weight:bold'>2.11</span> |
+| + RoPE | 10.80 | 15.8 | 24.6 | 5.99 | 3.17 |
+| + RoPE + PCA (3 features) + IOB | 10.90 | 15.8 | 24.7 | 6.29 | 2.56 |
 
 ---
 
 ### 2.5 Hour Input (63,000 samples)
 
-| Model                             | APE (%) | MAE | RMSE | Time/Epoch (s) | Inference (ms) |
-|----------------------------------|---------|-----|------|----------------|----------------|
-| Transformer P.E.                 | 11.50   | 16.3 | 25.4 | 6.91           | 2.35           |
-| + PCA (2 features)               | 15.60   | 23.1 | 33.1 | 7.02           | **1.50**       |
-| + IOB                            | 12.00   | 17.4 | 26.7 | 7.03           | **1.44**       |
-| + RoPE                           | **11.30** | **16.3** | **25.2** | 9.60       | 2.22           |
-| + RoPE + PCA (3 features) + IOB  | 11.90   | 17.2 | 26.1 | 10.1           | 3.77           |
+| Model | APE (%) | MAE | RMSE | Time/Epoch (s) | Inference (ms) |
+|--|--|--|--|--|-|
+| Transformer P.E. | 11.50 | <span style='color:gold;font-weight:bold'>16.3</span> | 25.4 | <span style='color:gold;font-weight:bold'>6.91</span> | 2.35 |
+| + PCA (2 features) | 15.60 | 23.1 | 33.1 | 7.02 | 1.50 |
+| + IOB | 12.00 | 17.4 | 26.7 | 7.03 | <span style='color:gold;font-weight:bold'>1.44</span> |
+| + RoPE | <span style='color:gold;font-weight:bold'>11.30</span> | <span style='color:gold;font-weight:bold'>16.3</span> | <span style='color:gold;font-weight:bold'>25.2</span> | 9.60 | 2.22 |
+| + RoPE + PCA (3 features) + IOB | 11.90 | 17.2 | 26.1 | 10.10 | 3.77 |
+
+---
+
 
 
 
