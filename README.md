@@ -121,7 +121,7 @@ Analysis: The 10-hour context window setup suffers from limited data availabilit
 | + PCA (2 features)               | 13.50       | 19.7       | 28.8       | 🥇 4.78           | 2.13           |
 | + IOB                            | 11.60       | 16.6       | 25.8       | 4.87             | 🥇 2.11         |
 | + RoPE                           | 10.80       | 15.8       | 24.6       | 5.99             | 3.17           |
-| + RoPE + PCA (3 features) + IOB  | 10.90       | 15.8       | 🥇 24.7     | 6.29             | 2.56           |
+| + RoPE + PCA (3 features) + IOB  | 10.90       | 15.8       | 24.7     | 6.29             | 2.56           |
 
 ---
 
