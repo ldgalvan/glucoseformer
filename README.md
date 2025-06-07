@@ -27,7 +27,7 @@ Hosted by the JAEB Center for Health Research.
 
 ## Data analysis
 
-The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 30,000. This reflects differing durations of participation in the clinical trial.
+Key observation #1: The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 30,000. This reflects differing durations of participation in the clinical trial.
 
 | Patient ID | Number of Readings |
 | ---------- | ------------------ |
@@ -45,4 +45,10 @@ The dataset contains continuous glucose monitoring (CGM) data collected every 5 
 | 062        | 28,457             |
 | 030        | 28,450             |
 | 511        | 28,378             |
+
+To avoid potential overfitting to the patient's with more abundant data, we chose a non-overlapping scheme in processing our sequences.
+
+Key observation #2: Both Basal and Bolus insulin dose amounts and frequency were reported in the dataset as well. To visualize this, we can plot vertical lines over every bolus/basal event
+
+![CGM data](sample_27_forecast_dark.png)
 
