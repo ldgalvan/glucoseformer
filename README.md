@@ -15,9 +15,7 @@ In this study we introduce GlucoseFormer, a time-series Transformer-based model 
 
 We train 5 variants of the vanilla transformer model on 3 different context lengths (2.5 hr, 5hr, and 10hr).
 
-![Model Forecast Comparison](sample_27_forecast_dark.png)
-
-
+![Model Forecast Comparison](images/sample_27_forecast_dark.png)
 
 ## Dataset
 
@@ -32,24 +30,24 @@ Hosted by the JAEB Center for Health Research.
 
 The dataset includes continuous glucose monitoring (CGM) data recorded every 5 minutes for a cohort of 343 patients. One of the most notable characteristics is the wide variability in the number of CGM readings per patient, ranging from just 122 to over 28,000 entries. This variance reflects the differing durations of patient participation in the clinical trial.
 
-To better understand this distribution, we visualize the number of CGM measurements per patient below:
-![CGM data](patient_counts_distribution.png)
+To better understand this distribution, we visualize the number of CGM measurements per patient below:  
+![CGM data](images/patient_counts_distribution.png)
 
 This distribution reveals a diverse set of data points across patients. However, to mitigate the risk of overfitting to patients with disproportionately large data volumes, we adopted a non-overlapping window strategy when constructing model input sequences.
 
 In addition to glucose measurements, the dataset also includes detailed records of Basal and Bolus insulin deliveries—both in terms of dosage and frequency. To visualize these clinical interventions, we plot vertical markers over time, corresponding to each insulin delivery event in a sample patient’s timeline.
 
-![CGM data](cgm_patient_81_day_plot.png)
+![CGM data](images/cgm_patient_81_day_plot.png)
 
 ## Feature Engineering
 
 With frequent bolus injections happening, we introduce a new variable which incorporated the decay rate of Insulin on Board (IOB). 
 
-![Bolus](bolus_decay.png)
+![Bolus](images/bolus_decay.png)
 
-This helps our time-series transformer learn to account for decaying bolus insulin that's still in the body. Here's an example of how this new varaiable behaves compared to cgm readings
+This helps our time-series transformer learn to account for decaying bolus insulin that's still in the body. Here's an example of how this new variable behaves compared to CGM readings:
 
-![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
+![Bolus2](images/cgm_and_iob_side_by_side_with_bolus.png)
 
 ## Dimensionality Reduction
 
@@ -57,14 +55,13 @@ To manage the complexity of high-dimensional input data, we apply **Principal Co
 
 > 📘 Learn more about [PCA here](https://en.wikipedia.org/wiki/Principal_component_analysis).
 
-
 ## Data Processing
 
 We use this [script](process_data.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used to create 4 sequences.
 
-![Bolus2](sequence_split_visual.png)
+![Split](images/sequence_split_visual.png)
 
-One consideration to make is, as we varying our context length (2.5hr, 5hr, 10hr), the amount of training sequences changes. Below is a table of our splits
+One consideration to make is, as we vary our context length (2.5hr, 5hr, 10hr), the amount of training sequences changes. Below is a table of our splits:
 
 | Context Window | Train Sequences | Val Sequences | Test Sequences |
 |----------------|------------------|----------------|-----------------|
@@ -82,26 +79,24 @@ For consistency, we used the same sized 3.1 million parameter transformer for ea
 
 | Parameter         | Value | Description                                         |
 |-------------------|-------|-----------------------------------------------------|
-| `input_size`      | 4     | Number of input features (e.g., CGM, basal, bolus, iob)  |
+| `input_size`      | 4     | Number of input features (e.g., CGM, basal, bolus, IOB) |
 | `d_model`         | 256   | Embedding dimension for each token                 |
 | `nhead`           | 8     | Number of attention heads                          |
 | `num_layers`      | 4     | Number of Transformer encoder layers               |
 | `dim_feedforward` | 1024  | Hidden size of the MLP (position-wise feedforward) |
 | `dropout`         | 0.2   | Dropout probability used across layers             |
 
-Here's the train/val losses for each model
+Here's the train/val losses for each model:
 
-![Bolus2](train_val_loss_2_5hr_side_by_side.png)
-![Bolus2](train_val_loss_5hr_side_by_side.png)
-![Bolus2](train_val_loss_10hr_side_by_side.png)
+![Loss 2.5hr](images/train_val_loss_2_5hr_side_by_side.png)  
+![Loss 5hr](images/train_val_loss_5hr_side_by_side.png)  
+![Loss 10hr](images/train_val_loss_10hr_side_by_side.png)
 
 Analysis: The 10-hour context window setup suffers from limited data availability, which constrains the model’s ability to minimize loss during training. In contrast, the 5-hour and 2.5-hour configurations benefit from denser data coverage, enabling better learning performance.
 
 ## Results
 
 Overview: It was insightful to observe how different model variants performed in terms of percentage error. The best-performing models were those using the 5-hour input window, which provided 28,500 training sequences, striking an effective balance between inference speed and prediction accuracy.
-
-
 
 ### ✅ 2.5 Hour Context Window (63,000 samples)
 
@@ -137,9 +132,6 @@ Overview: It was insightful to observe how different model variants performed in
 | + RoPE                           | 🥇 12.10    | 18.5       | 🥇 27.7     | 2.64             | 5.70           |
 | + RoPE + PCA (3 features) + IOB  | 12.70       | 🥇 13.5     | 🥇 27.7     | 2.64             | 4.94           |
 
-
-
-
 ## Conclusion and Future Improvements
 
 Forecasting continuous glucose monitor (CGM) values over time is a critical challenge in modern healthcare. In this project, we explored the feasibility of using transformer-based models with approximately 3.1 million parameters, along with feature extraction and dimensionality reduction techniques, to predict CGM trends.
@@ -154,10 +146,3 @@ Forecasting continuous glucose monitor (CGM) values over time is a critical chal
 
 - **Incorporating additional physiological features**  
   Including signals like basal insulin decay and other relevant biomarkers could improve model robustness and clinical relevance.
-
-
-
-
-
-
-
