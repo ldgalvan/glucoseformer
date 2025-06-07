@@ -92,7 +92,7 @@ Here's the train/val losses for each model
 ![Bolus2](train_val_loss_5hr_side_by_side.png)
 ![Bolus2](train_val_loss_10hr_side_by_side.png)
 
-
+Analysis: The 10-hour context window setup suffers from limited data availability, which constrains the model’s ability to minimize loss during training. In contrast, the 5-hour and 2.5-hour configurations benefit from denser data coverage, enabling better learning performance.
 
 
 
