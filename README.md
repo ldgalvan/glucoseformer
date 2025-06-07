@@ -53,12 +53,6 @@ The dataset contains continuous glucose monitoring (CGM) data collected every 5 
 
 From this chart, we can see there is a fair amount of diverse data. Still, to avoid potential overfitting to patients with more abundant data, we chose a non-overlapping scheme in processing our sequences.
 
-    </td>
-    <td>
-      <img src="patient_counts_distribution.png" width="400">
-    </td>
-  </tr>
-</table>
 
 To avoid potential overfitting to the patient's with more abundant data, we chose a non-overlapping scheme in processing our sequences.
 
