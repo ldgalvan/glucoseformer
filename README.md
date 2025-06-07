@@ -27,23 +27,7 @@ Hosted by the JAEB Center for Health Research.
 
 ## Data analysis
 
-Key observation #1: The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 30,000. This reflects differing durations of participation in the clinical trial.
-
-
-The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 30,000. This reflects differing durations of participation in the clinical trial.
-
-| Patient ID | Number of Readings |
-| ---------- | ------------------ |
-| 395        | 122                |
-| 259        | 140                |
-| 362        | 167                |
-| 146        | 184                |
-| 046        | 469                |        
-| ...        | ...                |
-| 527        | 28,476             |
-| 062        | 28,457             |
-| 030        | 28,450             |
-| 511        | 28,378             |
+Key observation #1: The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 28,378. This reflects differing durations of participation in the clinical trial. To furthe diagnose this, we plot patients vs total cgm measurements/patient
 
 ![CGM data](patient_counts_distribution.png)
 
