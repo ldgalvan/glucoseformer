@@ -50,6 +50,13 @@ This helps our time-series transformer learn adapt and account for this variable
 
 ![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
 
+## Dimensionality Reduction
+
+To manage the complexity of high-dimensional input data, we apply **Principal Component Analysis (PCA)** to reduce the input feature space to either 2 or 3 principal components. This helps improve generalization and training efficiency without significant loss of information.
+
+> 📘 Learn more about [PCA here](https://en.wikipedia.org/wiki/Principal_component_analysis).
+
+
 ## Data Processing
 
 We use this [script](process_data.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used to create 4 sequences.
