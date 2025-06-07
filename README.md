@@ -50,5 +50,5 @@ To avoid potential overfitting to the patient's with more abundant data, we chos
 
 Key observation #2: Both Basal and Bolus insulin dose amounts and frequency were reported in the dataset as well. To visualize this, we can plot vertical lines over every bolus/basal event
 
-![CGM data](sample_27_forecast_dark.png)
+![CGM data](cgm_patient_81_day_plot.png)
 
