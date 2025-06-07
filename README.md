@@ -16,6 +16,8 @@ GlucoseFormer is a time-series Transformer-based model designed to forecast cont
 - **PCA (Principal Component Analysis)**  
   Reduces the dimensionality of input features while preserving critical information, which improves generalization and training speed.
 
+We train 5 variants of the vanilla transformer model on 3 different context lengths (2.5 hr, 5hr, and 10hr).
+
 ## Dataset
 
 This project uses the publicly available dataset from:
@@ -48,3 +50,4 @@ This helps our time-series transformer learn adapt and account for this variable
 
 ![Bolus2](cgm_and_iob_side_by_side_with_bolus.png)
 
+## 
