@@ -1,8 +1,5 @@
 # GlucoseFormer 📈
 
-
-![Model Forecast Comparison](sample_27_forecast_dark.png)
-
 ## Intro
 
 In this study we introduce GlucoseFormer, a time-series Transformer-based model designed to forecast continuous glucose monitoring (CGM) levels. There are 3 key implementations:
@@ -17,6 +14,10 @@ In this study we introduce GlucoseFormer, a time-series Transformer-based model 
   Reduces the dimensionality of input features while preserving critical information, which improves generalization and training speed.
 
 We train 5 variants of the vanilla transformer model on 3 different context lengths (2.5 hr, 5hr, and 10hr).
+
+![Model Forecast Comparison](sample_27_forecast_dark.png)
+
+
 
 ## Dataset
 
