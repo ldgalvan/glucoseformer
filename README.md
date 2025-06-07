@@ -27,55 +27,52 @@ Hosted by the JAEB Center for Health Research.
 
 ## Data analysis
 
-The dataset contains cgm monitoring every 5 minutes for 343 patients' glucose levels. The first thing of importance was the amount of measurements per patient. these ranged from 122 to 28378, indicating some patients stayed in the group for varying amounts of time. 
+The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 30,000. This reflects differing durations of participation in the clinical trial.
+
+| Patient ID | Number of Readings |
+| ---------- | ------------------ |
+| 395        | 122                |
+| 259        | 140                |
+| 362        | 167                |
+| 146        | 184                |
+| 046        | 469                |
+| 348        | 626                |
+| 369        | 747                |
+| 076        | 1,042              |
+| 060        | 2,027              |
+| 507        | 4,025              |
+| 531        | 4,287              |
+| 357        | 4,317              |
+| 553        | 4,335              |
+| 317        | 5,033              |
+| 020        | 5,439              |
+| 411        | 5,891              |
+| 406        | 7,717              |
+| 580        | 8,881              |
+| 444        | 10,342             |
+| 314        | 10,695             |
 
 
-+----+-----+
-|PtID|count|
-+----+-----+
-| 395|  122|
-| 259|  140|
-| 362|  167|
-| 146|  184|
-|  46|  469|
-| 348|  626|
-| 369|  747|
-|  76| 1042|
-|  60| 2027|
-| 507| 4025|
-| 531| 4287|
-| 357| 4317|
-| 553| 4335|
-| 317| 5033|
-|  20| 5439|
-| 411| 5891|
-| 406| 7717|
-| 580| 8881|
-| 444|10342|
-| 314|10695|
-+----+-----+
+| Patient ID | Number of Readings |
+| ---------- | ------------------ |
+| 081        | 30,289             |
+| 464        | 29,669             |
+| 009        | 29,662             |
+| 584        | 29,066             |
+| 273        | 29,042             |
+| 535        | 28,923             |
+| 492        | 28,874             |
+| 429        | 28,833             |
+| 309        | 28,791             |
+| 588        | 28,767             |
+| 050        | 28,529             |
+| 069        | 28,529             |
+| 383        | 28,508             |
+| 359        | 28,508             |
+| 529        | 28,484             |
+| 139        | 28,482             |
+| 527        | 28,476             |
+| 062        | 28,457             |
+| 030        | 28,450             |
+| 511        | 28,378             |
 
-+----+-----+
-|PtID|count|
-+----+-----+
-|  81|30289|
-| 464|29669|
-|   9|29662|
-| 584|29066|
-| 273|29042|
-| 535|28923|
-| 492|28874|
-| 429|28833|
-| 309|28791|
-| 588|28767|
-|  50|28529|
-|  69|28529|
-| 383|28508|
-| 359|28508|
-| 529|28484|
-| 139|28482|
-| 527|28476|
-|  62|28457|
-|  30|28450|
-| 511|28378|
-+----+-----+
