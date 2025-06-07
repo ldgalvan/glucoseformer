@@ -56,6 +56,13 @@ We use this [script](process_data.py) to process our data into different lengths
 
 ![Bolus2](sequence_split_visual.png)
 
+One consideration to make is, as we varying our context length (2.5hr, 5hr, 10hr), the amount of training sequences changes. Below is a table of our splits
+
+| Context Window | Train Sequences | Val Sequences | Test Sequences |
+|----------------|------------------|----------------|-----------------|
+| 2.5 hours      | 63,525           | 7,940          | 7,942           |
+| 5 hours        | 28,514           | 3,564          | 3,565           |
+| 10 hours       | 6,909            | 863            | 865             |
 
 
 
