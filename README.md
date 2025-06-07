@@ -36,25 +36,22 @@ Key observation #1: The dataset contains continuous glucose monitoring (CGM) dat
 <strong>Key observation #1:</strong>  
 The dataset contains continuous glucose monitoring (CGM) data collected every 5 minutes for 343 patients. A key observation was the wide variance in the number of glucose readings per patient—ranging from just 122 to over 30,000. This reflects differing durations of participation in the clinical trial.
 
-<table>
-  <tr><th>Patient ID</th><th>Number of Readings</th></tr>
-  <tr><td>395</td><td>122</td></tr>
-  <tr><td>259</td><td>140</td></tr>
-  <tr><td>362</td><td>167</td></tr>
-  <tr><td>146</td><td>184</td></tr>
-  <tr><td>046</td><td>469</td></tr>
-  <tr><td>348</td><td>626</td></tr>
-  <tr><td>369</td><td>747</td></tr>
-  <tr><td>076</td><td>1,042</td></tr>
-  <tr><td>060</td><td>2,027</td></tr>
-  <tr><td>...</td><td>...</td></tr>
-  <tr><td>527</td><td>28,476</td></tr>
-  <tr><td>062</td><td>28,457</td></tr>
-  <tr><td>030</td><td>28,450</td></tr>
-  <tr><td>511</td><td>28,378</td></tr>
-</table>
+| Patient ID | Number of Readings |
+| ---------- | ------------------ |
+| 395        | 122                |
+| 259        | 140                |
+| 362        | 167                |
+| 146        | 184                |
+| 046        | 469                |        
+| ...        | ...                |
+| 527        | 28,476             |
+| 062        | 28,457             |
+| 030        | 28,450             |
+| 511        | 28,378             |
 
-To avoid potential overfitting to patients with more abundant data, we chose a non-overlapping scheme in processing our sequences.
+![CGM data](patient_counts_distribution.png)
+
+From this chart, we can see there is a fair amount of diverse data. Still, to avoid potential overfitting to patients with more abundant data, we chose a non-overlapping scheme in processing our sequences.
 
     </td>
     <td>
