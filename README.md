@@ -52,7 +52,7 @@ This helps our time-series transformer learn adapt and account for this variable
 
 ## Data Processing
 
-We use this [script](process_sequences.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used
+We use this [script](process_data.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used
 
 ![Bolus2](sequence_split_visual.png)
 
