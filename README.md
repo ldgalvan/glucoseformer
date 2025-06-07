@@ -21,7 +21,7 @@ We train 5 variants of the vanilla transformer model on 3 different context leng
 
 ## Dataset
 
-This project uses the publicly available dataset from:
+This project uses the publicly available dataset:
 
 **[The Insulin-Only Bionic Pancreas Pivotal Trial: Testing the iLet in Adults and Children with Type 1 Diabetes](https://public.jaeb.org/datasets/diabetes)**  
 Hosted by the JAEB Center for Health Research.
