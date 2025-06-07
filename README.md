@@ -88,9 +88,9 @@ For consistency, we use a 3.1 million parameter transformer for each sequence le
 
 Here's the train/val losses for each model
 
-![Bolus2](sequence_split_visual.png)
-![Bolus2](sequence_split_visual.png)
-![Bolus2](sequence_split_visual.png)
+![Bolus2](train_val_loss_2_5hr_side_by_side.png)
+![Bolus2](train_val_loss_5hr_side_by_side.png)
+![Bolus2](train_val_loss_10hr_side_by_side.png)
 
 
 
