@@ -98,8 +98,7 @@ One consideration to make is, as we vary our context length (2.5hr, 5hr, 10hr), 
 | 5 hours        | 28,514           | 3,564          | 3,565           |
 | 10 hours       | 6,909            | 863            | 865             |
 
-This allows us to understand the requirements for data and number of parameters for our model.
-
+It's important to consider the drawbacks of larger context windows (ultimately leading to less available training data).
 ## Model Training
 
 Hardware: All training experiments were conducted locally on an Nvidia RTX 3090. 
