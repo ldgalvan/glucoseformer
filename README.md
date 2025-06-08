@@ -13,6 +13,7 @@ Trained model weights can be found in the [`weights`](weights/model_weights) dir
 The primary goal of this project was to gain hands-on experience across the **entire ML lifecycle**, from raw data to production deployment.  
 **Feedback and suggestions are always welcome!**
 
+## Intro
 
 In this study we introduce GlucoseFormer, a time-series Transformer-based model designed to forecast continuous glucose monitoring (CGM) levels. There are 3 key modifications we explore:
 
