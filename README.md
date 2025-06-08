@@ -146,3 +146,16 @@ Forecasting continuous glucose monitor (CGM) values over time is a critical chal
 
 - **Incorporating additional physiological features**  
   Including signals like basal insulin decay and other relevant biomarkers could improve model robustness and clinical relevance.
+
+### ☁️ Cloud Deployment
+
+To test cloud deployment, I chose **AWS** as the provider and deployed the model using **ECS Fargate**. The model was wrapped in a **FastAPI** application, containerized with **Docker**, and pushed to **Amazon ECR**.
+
+I implemented the ability to feed custom sequences in for prediction, as is indicated by the -F flag.
+
+```bash
+texasgoat@DESKTOP-OMI6RTO:curl -X POST http://<aws_task_ip>:8000/predict \
+     -F "file=@one_sequence.npy"
+
+{"predicted_cgm":[234.2991485595703,234.72262573242188,234.8809051513672,235.13677978515625,235.8567352294922,237.21424865722656,236.97845458984375,234.7597198486328,231.78501892089844,227.13497924804688,215.05245971679688,211.31585693359375]}
+```
