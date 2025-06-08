@@ -1,6 +1,6 @@
-# GlucoseFormer 📈
+# 🚀 GlucoseFormer 📈
 
-## 🚀 Project Overview
+## Project Overview
 
 This project focuses on **glucose forecasting** using a full **end-to-end machine learning pipeline**, covering all key stages of the ML lifecycle:
 
