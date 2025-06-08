@@ -158,10 +158,8 @@ I registered a task definition and ran it using the ECS CLI, specifying the appr
 Here’s an example of a successful request using `curl`:
 
 ```bash
-curl -X POST http://<aws_task_ip>:8000/predict \
+texasgoat@DESKTOP-OMI6RTO:curl -X POST http://<aws_task_ip>:8000/predict \
      -F "file=@one_sequence.npy"
-```
-```bash
-curl -X POST http://<aws_task_ip>:<port>/predict \ -F "file=@one_sequence.npy"
+
 {"predicted_cgm":[234.2991485595703,234.72262573242188,234.8809051513672,235.13677978515625,235.8567352294922,237.21424865722656,236.97845458984375,234.7597198486328,231.78501892089844,227.13497924804688,215.05245971679688,211.31585693359375]}
 ```
