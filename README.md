@@ -147,13 +147,9 @@ Forecasting continuous glucose monitor (CGM) values over time is a critical chal
 - **Incorporating additional physiological features**  
   Including signals like basal insulin decay and other relevant biomarkers could improve model robustness and clinical relevance.
 
-### Cloud Deployment
-
 ### ☁️ Cloud Deployment
 
 To test cloud deployment, I chose **AWS** as the provider and deployed the model using **ECS Fargate**. The model was wrapped in a **FastAPI** application, containerized with **Docker**, and pushed to **Amazon ECR**.
-
-I registered a task definition and ran it using the ECS CLI, specifying the appropriate **VPC**, **subnet**, and **security group**, and enabled public IP assignment. Once the task was running, I could send prediction requests to the container using the public IP.
 
 Here’s an example of a successful request using `curl`:
 
