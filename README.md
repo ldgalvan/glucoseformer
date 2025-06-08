@@ -86,7 +86,7 @@ To manage the complexity of high-dimensional input data, we apply **Principal Co
 
 ## Data Processing
 
-We use this [script](process_data.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used to create 4 sequences.
+We use this [script](process_and_train/process_data.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used to create 4 sequences.
 
 ![Split](images/sequence_split_visual.png)
 
