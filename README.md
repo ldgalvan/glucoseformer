@@ -10,7 +10,6 @@ This project focuses on **glucose forecasting** using a full **end-to-end machin
 
 Trained model weights can be found in the [`weights`](weights/model_weights) directory.
 
-The primary goal of this project was to gain hands-on experience across the **entire ML lifecycle**, from raw data to production deployment.  
 **Feedback and suggestions are always welcome!**
 
 ![Model Forecast Comparison](images/sample_27_forecast_dark.png)
