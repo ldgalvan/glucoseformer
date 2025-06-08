@@ -1,6 +1,18 @@
 # GlucoseFormer 📈
 
-## Intro
+## 🚀 Project Overview
+
+This project focuses on **glucose forecasting** using a full **end-to-end machine learning pipeline**, covering all key stages of the ML lifecycle:
+
+- 🔄 [Data Preprocessing](/process_and_train) using **PySpark**
+- 🧠 [Model Training](/process_and_train/train_glucformer_cpu.py) with **PyTorch**
+- 🌐 [Model Deployment](/prediction_example) via **FastAPI** on **AWS ECS**
+
+Trained model weights can be found in the [`weights`](weights) directory.
+
+The primary goal of this project was to gain hands-on experience across the **entire ML lifecycle**, from raw data to production deployment.  
+**Feedback and suggestions are always welcome!**
+
 
 In this study we introduce GlucoseFormer, a time-series Transformer-based model designed to forecast continuous glucose monitoring (CGM) levels. There are 3 key modifications we explore:
 
