@@ -151,7 +151,7 @@ Forecasting continuous glucose monitor (CGM) values over time is a critical chal
 
 To test cloud deployment, I chose **AWS** as the provider and deployed the model using **ECS Fargate**. The model was wrapped in a **FastAPI** application, containerized with **Docker**, and pushed to **Amazon ECR**.
 
-Here’s an example of a successful request using `curl`:
+I implemented the ability to feed custom sequences in for prediction, as is indicated by the -F flag.
 
 ```bash
 texasgoat@DESKTOP-OMI6RTO:curl -X POST http://<aws_task_ip>:8000/predict \
