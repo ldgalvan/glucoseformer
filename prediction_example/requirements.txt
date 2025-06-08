@@ -1,0 +1,12 @@
+joblib==1.5.1
+numpy==1.26.4
+rotary-embedding-torch==0.8.6
+scikit-learn==1.6.1
+torch==2.5.1
+torchaudio==2.5.1
+torchvision==0.20.1
+fastapi
+uvicorn
+pydantic
+python-multipart
+

@@ -1,23 +1,27 @@
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from typing import Optional
 import torch
 import numpy as np
 import joblib
-from fastapi import FastAPI, UploadFile, File
-import io
+import os
 from train_glucformer_cpu import TransformerModel
+
+app = FastAPI()
 
 # ----------------------
 # CONFIG
 # ----------------------
 MODEL_SUFFIX = "baseline_5hr"
-SEQUENCE_PATH = "one_sequence.npy"
+DEFAULT_SEQUENCE = "one_sequence.npy"
 MODEL_PATH = f"best_model_{MODEL_SUFFIX}.pth"
 X_SCALER_PATH = f"x_scaler_{MODEL_SUFFIX}.pkl"
 Y_SCALER_PATH = f"y_scaler_{MODEL_SUFFIX}.pkl"
 
 # ----------------------
-# MODEL SETUP
+# LOAD MODEL & SCALERS ONCE
 # ----------------------
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 model = TransformerModel(input_size=4).to(device)
 model.load_state_dict(torch.load(MODEL_PATH, map_location=device))
 model.eval()
@@ -26,23 +30,30 @@ x_scaler = joblib.load(X_SCALER_PATH)
 y_scaler = joblib.load(Y_SCALER_PATH)
 
 # ----------------------
-# FASTAPI APP
+# REQUEST MODEL
 # ----------------------
-app = FastAPI()
+class FilePathRequest(BaseModel):
+    file_path: Optional[str] = None
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(None)):
-    if file:
-        contents = await file.read()
-        sequence = np.load(io.BytesIO(contents))
-    else:
-        sequence = np.load(SEQUENCE_PATH)
+def predict(request: FilePathRequest):
+    file_path = request.file_path or DEFAULT_SEQUENCE
 
-    assert sequence.shape == (60, 4), "Input sequence must have shape (60, 4)"
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail=f"File not found: {file_path}")
 
+    try:
+        sequence = np.load(file_path)
+        if sequence.shape != (60, 4):
+            raise ValueError(f"Expected shape (60, 4), got {sequence.shape}")
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Error loading file: {e}")
+
+    # Preprocess
     sequence_scaled = x_scaler.transform(sequence)
     sequence_scaled = torch.tensor(sequence_scaled, dtype=torch.float32).unsqueeze(0).to(device)
 
+    # Inference
     with torch.no_grad():
         output_scaled = model(sequence_scaled)[:, -12:, :].squeeze(0).squeeze(-1).cpu().numpy()
 
