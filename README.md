@@ -110,7 +110,7 @@ For consistency, we used the same sized 3.1 million parameter transformer for ea
 
 | Parameter         | Value | Description                                         |
 |-------------------|-------|-----------------------------------------------------|
-| `input_size`      | 4     | Number of input features (e.g., CGM, basal, bolus, IOB) |
+| `input_size`      | 2-4     | Dependent on our PCA choice (2 or 3 features). this was equal to 4 with transformer + IOB |
 | `d_model`         | 256   | Embedding dimension for each token                 |
 | `nhead`           | 8     | Number of attention heads                          |
 | `num_layers`      | 4     | Number of Transformer encoder layers               |
