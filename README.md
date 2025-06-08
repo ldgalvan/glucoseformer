@@ -122,11 +122,11 @@ Here's the train/val losses for each model:
 ![Loss 5hr](images/train_val_loss_5hr_side_by_side.png)  
 ![Loss 10hr](images/train_val_loss_10hr_side_by_side.png)
 
-Analysis: The 10-hour context window setup suffers from limited data availability, which constrains the model’s ability to minimize loss during training. In contrast, the 5-hour and 2.5-hour configurations benefit from denser data coverage, enabling better learning performance.
+**Analysis:** The 10-hour context window setup suffers from limited data availability, which constrains the model’s ability to minimize loss during training. In contrast, the 5-hour and 2.5-hour configurations benefit from denser data coverage, enabling better learning performance.
 
 ## Results
 
-Overview: It was insightful to observe how different model variants performed in terms of percentage error. The best-performing models were those using the 5-hour input window, which provided 28,500 training sequences, striking an effective balance between inference speed and prediction accuracy.
+Results from training and inference on our 15 models:
 
 ### ✅ 2.5 Hour Context Window (63,000 samples)
 
@@ -162,6 +162,7 @@ Overview: It was insightful to observe how different model variants performed in
 | + RoPE                           | 🥇 12.10    | 18.5       | 🥇 27.7     | 2.64             | 5.70           |
 | + RoPE + PCA (3 features) + IOB  | 12.70       | 🥇 13.5     | 🥇 27.7     | 2.64             | 4.94           |
 
+**Analysis:** It was insightful to observe how different model variants performed in terms of percentage error. The best-performing models were those using the 5-hour input window, which provided 28,500 training sequences, striking an effective balance between inference speed and prediction accuracy.
 ## Conclusion and Future Improvements
 
 Forecasting continuous glucose monitor (CGM) values over time is a critical challenge in modern healthcare. In this project, we explored the feasibility of using transformer-based models with approximately 3.1 million parameters, along with feature extraction and dimensionality reduction techniques, to predict CGM trends.
