@@ -15,6 +15,20 @@ The primary goal of this project was to gain hands-on experience across the **en
 
 ![Model Forecast Comparison](images/sample_27_forecast_dark.png)
 
+## Table of Contents
+- [Intro](#intro)
+- [Dataset](#dataset)
+- [Data Analysis](#data-analysis)
+- [Feature Engineering](#feature-engineering)
+- [Dimensionality Reduction](#dimensionality-reduction)
+- [Data Processing](#data-processing)
+- [Model Training](#model-training)
+- [Results](#results)
+  - [2.5 Hour Context Window](#️-25-hour-context-window-63000-samples)
+  - [5 Hour Context Window](#️-5-hour-context-window-28500-samples)
+  - [10 Hour Context Window](#️-10-hour-context-window-6900-samples)
+- [Conclusion and Future Improvements](#conclusion-and-future-improvements)
+- [☁️ Cloud Deployment](#️-cloud-deployment)
 
 ## Intro
 
