@@ -6,7 +6,7 @@ This project focuses on **glucose forecasting** using a full **end-to-end machin
 
 - 🔄 [Data Preprocessing](/process_and_train/process_data.py) using **PySpark**
 - 🧠 [Model Training](/process_and_train/train_glucformer.py) with **PyTorch**
-- 🌐 [Model Deployment](/prediction_example) via **FastAPI** on **AWS ECS**
+- 🌐 [Model Deployment](/prediction_example/app.py) via **FastAPI** on **AWS ECS**
 
 Trained model weights can be found in the [`weights`](weights/model_weights) directory.
 
