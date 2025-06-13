@@ -1,0 +1,41 @@
+name: CI/CD for GlucoseFormer Inference API
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_REGION: us-east-1
+      ECR_REPO_NAME: glucoseformer
+      IMAGE_TAG: latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Log in to Amazon ECR
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build and tag Docker image
+      run: |
+        docker build -t $ECR_REPO_NAME .
+        docker tag $ECR_REPO_NAME:latest ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+
+    - name: Push Docker image to ECR
+      run: |
+        docker push ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ env.AWS_REGION }}.amazonaws.com/$ECR_REPO_NAME:$IMAGE_TAG
+
+    - name: Deploy to ECS (Fargate)
+      run: |
+        aws ecs update-service \
+          --cluster glucoseformer-cluster \
+          --service glucoseformer-service \
+          --region $AWS_REGION \
+          --force-new-deployment
+
