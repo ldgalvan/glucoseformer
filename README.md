@@ -83,7 +83,7 @@ To manage the complexity of high-dimensional input data, we apply **Principal Co
 
 > 📘 Learn more about [PCA here](https://en.wikipedia.org/wiki/Principal_component_analysis).
 
-## Data Processing
+## Data Processing (Pyspark)
 
 We use this [script](process_and_train/process_data.py) to process our data into different lengths. Here's an example of one of our splits, where a 5 hour context window was used to create 4 sequences.
 
@@ -99,11 +99,14 @@ One consideration to make is, as we vary our context length (2.5hr, 5hr, 10hr), 
 
 It's important to consider the drawbacks of larger context windows (ultimately leading to less available training data).
 
-We also experimented with Azure Data Factory, developing a processing pipeline which is broken into 3 meddalion stages (bronze, silver, gold)
+## Data Processing (Azure Data Factory)
 
-### Bronze stage
+We implemented a robust data processing pipeline using Azure Data Factory, structured according to the medallion architecture—comprising Bronze, Silver, and Gold layers.
+
+### Bronze Layer
 ![Split](images/bronze.png)
 
+In the Bronze layer, we performed initial data cleansing by applying basic transformations such as removing null values and dropping irrelevant columns from the raw dataset. This stage ensures a clean foundation for downstream analytics and model training.
 ## Model Training
 
 Hardware: All training experiments were conducted locally on an Nvidia RTX 3090. 
