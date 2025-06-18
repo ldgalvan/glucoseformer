@@ -4,7 +4,7 @@
 
 This project focuses on **glucose forecasting** using a full **end-to-end machine learning pipeline**, covering all key stages of the ML lifecycle:
 
-- 🔄 [Data Preprocessing](/process_and_train/process_data.py) using **PySpark**
+- 🔄 [Data Preprocessing](/process_and_train/process_data.py) using **PySpark** and **Azure Data Factory**
 - 🧠 [Model Training](/process_and_train/train_glucformer.py) with **PyTorch**
 - 🌐 [Model Deployment](/prediction_example/app.py) via **FastAPI** on **AWS ECS**
 
@@ -98,6 +98,11 @@ One consideration to make is, as we vary our context length (2.5hr, 5hr, 10hr), 
 | 10 hours       | 6,909            | 863            | 865             |
 
 It's important to consider the drawbacks of larger context windows (ultimately leading to less available training data).
+
+We also experimented with Azure Data Factory, developing a processing pipeline which is broken into 3 meddalion stages (bronze, silver, gold)
+
+![Split](images/sequence_split_visual.png)
+
 ## Model Training
 
 Hardware: All training experiments were conducted locally on an Nvidia RTX 3090. 
