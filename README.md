@@ -102,7 +102,7 @@ It's important to consider the drawbacks of larger context windows (ultimately l
 We also experimented with Azure Data Factory, developing a processing pipeline which is broken into 3 meddalion stages (bronze, silver, gold)
 
 ### Bronze stage
-![Split](images/Screenshot 2025-06-18 151432.png.png)
+![Split](images/bronze.png)
 
 ## Model Training
 
