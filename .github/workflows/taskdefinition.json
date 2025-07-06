@@ -1,2 +1,32 @@
-"taskDefinitionArn": "arn:aws:ecs:us-east-2:079900528461:task-definition/test_glucose_former:1",
-"family": "test_glucose_former",
+{
+  "family": "test_glucose_former",
+  "networkMode": "awsvpc",
+  "executionRoleArn": "arn:aws:iam::079900528461:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "rope-api-container",
+      "image": "079900528461.dkr.ecr.us-east-2.amazonaws.com/docker-api:latest",
+      "cpu": 256,
+      "memory": 512,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/test_glucose_former",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024"
+}
