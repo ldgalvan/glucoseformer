@@ -1,0 +1,2 @@
+"taskDefinitionArn": "arn:aws:ecs:us-east-2:079900528461:task-definition/test_glucose_former:1",
+"family": "test_glucose_former",
